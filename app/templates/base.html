@@ -1,9 +1,10 @@
 !DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="'{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
     <title>Ceneo Scraper</title>
 </head>
 <body>
@@ -11,10 +12,14 @@
         <h1>Ceneo.pl Scraper</h1>
     </header>
     <section>
-        <p>To jest plik bazowy</p>
+        {% block content %}
+            <p>To jest plik bazowy</p>
+        {% endblock %}
+
     </section>
     <footer>
-        <p>Łukasz Gałek, Uniwersytet Ekonomiczny</p>
+        <p>Łukasz Gałek, Uniwersytet Ekonomiczny w Krakowie</p>
     </footer>
+
 </body>
 </html>
